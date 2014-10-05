@@ -7,10 +7,19 @@ location list commands, tag commands and more. When a command that space.vim
 has hooked into is issued, it remaps the `<Space>` key to repeat that
 command, and it also remaps `<S-Space>` and `<BS>` to do the inverse.
 
-This is a slightly modify version or original version from
-[spiiph][space] with ability to unmap `;`, `,` which often remapped to colon `:`
-and `<leader>` as a common habit of Vim user and also support some of
-[vim-unimpaired][unimpaired] keymap.
+This is a slightly modified version of the original version from
+[spiiph][space] with ability to support some of [vim-unimpaired][unimpaired]
+keymap.
+
+It's also able to unmap `;`, `,` which often remapped to colon `:`
+and `<leader>` as a common habit of Vim user. (`<space>` still works as
+expected: `fX<space><space>`...)
+
+Add this line to `.vimrc`:
+
+```vim
+let g:space_no_character_repeat_movements = 1
+```
 
 [space]: https://github.com/spiiph/vim-space 
 [unimpaired]: https://github.com/tpope/vim-unimpaired
